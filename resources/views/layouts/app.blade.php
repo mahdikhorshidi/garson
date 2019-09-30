@@ -18,11 +18,19 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="/home/resturanrt">رستوران</a>
+    <a href="/home/item">خوراکی ها</a>
+    <a href="/home/seat">میز و آلاچیق</a>
+</div>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
+                <button class="openbtn" onclick="openNav()">&#9776;</button>
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
@@ -76,5 +84,6 @@
             @yield('content')
         </main>
     </div>
+<script src="{{ asset('js/script.js') }}" defer></script>
 </body>
 </html>
