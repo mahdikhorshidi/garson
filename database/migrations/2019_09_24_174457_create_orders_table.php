@@ -19,7 +19,7 @@ class CreateOrdersTable extends Migration
             $table->unsignedBigInteger('seat_id');
             $table->dateTime('begin');
             $table->dateTime('end');
-            $table->enum('checkout', ['سفارش باز','سفارش باز','پرداخت نقدی','پرداخت بانکی','پرداخت کیف پول']);
+            $table->string('checkout');
             $table->string('transactionID');
             $table->integer('sum');
             $table->foreign('user_id')->references('id')->on('users');

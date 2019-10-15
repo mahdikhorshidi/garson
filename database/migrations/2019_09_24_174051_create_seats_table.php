@@ -18,7 +18,7 @@ class CreateSeatsTable extends Migration
             $table->string('name');
             $table->text('detail');
             $table->unsignedBigInteger('resturant_id');
-            $table->string('thumb')->default('/images/defautl/seat.jpg');
+            $table->string('thumb')->default('/images/default/seat.jpg');
             $table->foreign('resturant_id')->references('id')->on('resturants');
             $table->timestamps();
         });
